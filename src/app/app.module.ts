@@ -9,8 +9,9 @@ import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { AppRoutingModule } from './app-routing.module';
-import { E404Component } from './misc/e404/e404.component';
+import { E404Component } from './home-misc/e404/e404.component';
 import { HomeComponent } from './home-misc/home/home.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './home-misc/home/home.component';
     UserEditComponent,
     UserDetailComponent,
     E404Component,
-    HomeComponent
+    HomeComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
