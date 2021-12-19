@@ -1,1 +1,44 @@
-<p>user-list works!</p>
+<table class="table table-sm table-striped table-hover">
+    <thead>
+      <tr>
+        <th colspan="8"><h4>User List</h4></th>
+      </tr>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Card Number</th>
+        <th>Pin</th>
+        <th>Checking Balance</th>
+        <th>Saving Balance</th>
+        <th>Total</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Phone</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.firstname }} {{ user.lastname }}</td>
+        <td>{{ user.cardNumber}}</td>
+        <td>{{ user.pin }}</td>
+        <td>{{ user.checking }}</td>
+        <td>{{ user.saving }}</td>
+        <td>{{ user.total }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.password }}</td>
+        <td>{{ user.address }}</td>
+        <td>{{ user.city }}</td>
+        <td>{{ user.state }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <a routerLink="/users/detail/{{ user.id }}">Detail</a> |
+          <a routerLink="/users/edit/{{ user.id }}">Edit</a>
+        </td>
+      </tr>
+    </tbody>
